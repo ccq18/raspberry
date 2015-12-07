@@ -1,6 +1,7 @@
-__author__ = 'ccq18'
 # !/usr/bin/python
 # coding: utf8
+__author__ = 'ccq18'
+
 import sys
 import RPi.GPIO as GPIO
 import time
@@ -22,7 +23,7 @@ def init():
     GPIO.setup(IN4, GPIO.OUT)
 
 
-# Ç°½ø
+# å‰è¿›
 def forward(tf):
     GPIO.output(IN1, GPIO.HIGH)
     GPIO.output(IN2, GPIO.LOW)
@@ -32,7 +33,7 @@ def forward(tf):
     GPIO.cleanup()
 
 
-# ºóÍË
+# åé€€
 def reverse(tf):
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.HIGH)
@@ -42,7 +43,7 @@ def reverse(tf):
     GPIO.cleanup()
 
 
-# ×ó×ªÍä
+# å·¦è½¬å¼¯
 def left(tf):
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.LOW)
@@ -52,7 +53,7 @@ def left(tf):
     GPIO.cleanup()
 
 
-# ÓÒ×ªÍä
+# å³è½¬å¼¯
 def right(tf):
     GPIO.output(IN1, GPIO.HIGH)
     GPIO.output(IN2, GPIO.LOW)
@@ -62,7 +63,7 @@ def right(tf):
     GPIO.cleanup()
 
 
-# ºó×ó×ªÍä
+# åå·¦è½¬å¼¯
 def pivot_left(tf):
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.HIGH)
@@ -72,7 +73,7 @@ def pivot_left(tf):
     GPIO.cleanup()
 
 
-# ºóÓÒ×ªÍä
+# åå³è½¬å¼¯
 def pivot_right(tf):
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.LOW)
@@ -82,7 +83,7 @@ def pivot_right(tf):
     GPIO.cleanup()
 
 
-# Ô­µØ×ó×ª
+# åŸåœ°å·¦è½¬
 def p_left(tf):
     GPIO.output(IN1, GPIO.LOW)
     GPIO.output(IN2, GPIO.HIGH)
@@ -92,7 +93,7 @@ def p_left(tf):
     GPIO.cleanup()
 
 
-# Ô­µØÓÒ×ª
+# åŸåœ°å³è½¬
 def p_right(tf):
     GPIO.output(IN1, GPIO.HIGH)
     GPIO.output(IN2, GPIO.LOW)
